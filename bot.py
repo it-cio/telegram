@@ -23,6 +23,7 @@ async def send_message(message):
     bot_message = await bot.send_message(bot_id, message)
     id_list.append(bot_message.message_id)
     await asyncio.sleep(1)
+    return bot_message.message_id
 
 
 async def edit_message(message, message_id):
