@@ -63,7 +63,8 @@ async def delete_pinned(message: types.Message):
 
 
 async def on_startup(_):
-    await send_message('Бот приступил к работе!')
+    # await send_message('Бот приступил к работе!')
+    print('Bot start working')
     await asyncio.sleep(1)
 
 
