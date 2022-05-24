@@ -7,8 +7,8 @@ from aiogram import Bot, Dispatcher, executor, types
 
 id_list = []
 load_dotenv()
-bot_name = os.getenv('token')
-bot_id = os.getenv('id')
+bot_name = os.getenv('TOKEN')
+bot_id = os.getenv('ID')
 bot = Bot(token=bot_name)
 dp = Dispatcher(bot)
 
