@@ -74,5 +74,8 @@ async def on_shutdown(_):
     await asyncio.sleep(1)
 
 
-def run(startup=fn, shutdown=fn):
-    executor.start_polling(dp, skip_updates=True, on_startup=(on_startup, startup), on_shutdown=(on_shutdown, shutdown))
+async def run(startup=fn, shutdown=fn):
+    executor.start_polling(dp, skip_updates=True,
+                           on_startup=(on_startup, startup),
+                           on_shutdown=(on_shutdown, shutdown))
+    
