@@ -1,3 +1,4 @@
+import logging
 import os
 import asyncio
 from datetime import datetime
@@ -11,6 +12,7 @@ bot_name = os.getenv('TOKEN')
 bot_id = os.getenv('ID')
 bot = Bot(token=bot_name)
 dp = Dispatcher(bot)
+logging.basicConfig(level=logging.INFO)
 
 
 def date_time():
@@ -64,7 +66,7 @@ async def delete_pinned(message: types.Message):
 
 async def on_startup(_):
     # await send_message('Бот приступил к работе!')
-    print('Bot start working')
+    logging.info('Bot start working')
     await asyncio.sleep(1)
 
 
